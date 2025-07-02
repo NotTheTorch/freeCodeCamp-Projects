@@ -1,0 +1,75 @@
+body
+{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 100px;
+}
+
+h1
+{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.text-selector
+{
+    font-size: 18px;
+}
+
+.input-taker-container
+{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding-bottom: 20px;
+    margin: 50px auto;
+    box-shadow: 0 0 9px rgb(255, 230, 91);
+    background-color: rgb(75, 75, 75);
+    color: orange;
+    gap: 10px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.inline-selector
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#text-input
+{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    width: 200px;
+    font-size: 1em;
+    text-align: center;
+    outline: none;
+}
+
+.check-button
+{
+    background-color: orange;
+    border: none;
+    padding: 7px 15px;
+    font-weight: bold;
+    border-radius: 14px;
+}
+
+.hide
+{
+    display: none;
+}
+
+.hidden-text
+{
+    text-align: center;
+    font-size: 24px;
+    color: orange;
+    font-weight: 700;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Scholarship Survey</h1>
+    <p id="description">Provide your details for the scholarship</p>
+
+    <form id="survey-form" action="POST">
+        <fieldset>
+            <label id="name-label" for="name">Full Name: <input id="name" type="text" placeholder="Enter your name"></label>
+            <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="Enter your email"></label>
+            <label id="number-label" for="number">Contact Number: <input id="number" type="tel" pattern="\d{10}" maxlength="10" inputmode="numeric" placeholder="Enter your phone number"></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Are you eligible for Scholarship?(required)</legend>
+            <label for="radio-yes"><input class="inline" id="radio-yes" name="radio-btn" type="radio" checked> Yes</label>
+            <label for="radio-no"><input class="inline" id="radio-no" name="radio-btn" type="radio"> No</label>
+        </fieldset>
+
+        <fieldset>
+            <label for="">Level of Education:
+                <select name="" id="drop-down" required>
+                    <option value="">select one</option>
+                    <option value="High_School">High School</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Gradutate">Graduate</option>
+                    <option value="Postgraduate">Postgraduate</option>
+                    <option value="PhD">PhD</option>
+                </select>
+            </label>
+
+            <label for="">Upload your Degree Certificate:<input type="file"></label>
+            <label for="">Why are you applying for this scholarship?
+                <textarea name="" id="" rows="3" cols="30"></textarea>
+            </label>
+            <label class="terms" for=""><input class="inline" type="checkbox" required>I agree to the <a href="https://freecodecamp.org">terms and conditions</a></label>
+        <input id="submit" type="submit">
+        </fieldset>
+    </form>
+    
+</body>
+</html>
