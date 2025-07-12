@@ -1,75 +1,139 @@
-body
-{
-    background-color: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 100px;
+/* Base & Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1
-{
-    text-align: center;
-    margin: 20px auto;
+body {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 15px;
+  min-height: 100vh;
 }
 
-.text-selector
-{
-    font-size: 18px;
+/* Header */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffa500;
+  text-shadow: 1px 1px 5px rgba(255, 165, 0, 0.3);
+  text-align: center;
 }
 
-.input-taker-container
-{
-    display: flex;
+/* Main Container */
+.input-taker-container {
+  background-color: #333;
+  color: #ffa500;
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.input-taker-container:hover {
+  transform: translateY(-3px);
+}
+
+/* Instruction Text */
+.text-selector {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Input & Button Container */
+.inline-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Input Field */
+#text-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  width: 200px;
+  text-align: center;
+  padding: 8px;
+  transition: border-color 0.3s ease;
+}
+
+#text-input:focus {
+  border-color: #ffa500;
+  outline: none;
+}
+
+/* Check Button */
+.check-button {
+  background-color: #ffa500;
+  color: #1e1e1e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check-button:hover {
+  background-color: #ffc14d;
+}
+
+/* Result Message */
+.empty-container {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffa500;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .input-taker-container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  #text-input {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .check-button {
+    width: 100%;
+  }
+
+  .inline-selector {
     flex-direction: column;
-    width: 400px;
-    padding-bottom: 20px;
-    margin: 50px auto;
-    box-shadow: 0 0 9px rgb(255, 230, 91);
-    background-color: rgb(75, 75, 75);
-    color: orange;
     gap: 10px;
-    align-items: center;
-    border-radius: 20px;
-}
+  }
 
-.inline-selector
-{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    vertical-align: middle;
-}
-
-#text-input
-{
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid white;
-    color: white;
-    width: 200px;
-    font-size: 1em;
-    text-align: center;
-    outline: none;
-}
-
-.check-button
-{
-    background-color: orange;
-    border: none;
-    padding: 7px 15px;
-    font-weight: bold;
-    border-radius: 14px;
-}
-
-.hide
-{
-    display: none;
-}
-
-.hidden-text
-{
-    text-align: center;
-    font-size: 24px;
-    color: orange;
-    font-weight: 700;
+  h1 {
+    font-size: 2rem;
+  }
 }

@@ -31,11 +31,11 @@ function htmlGenarator(bool,str)
     let htmlString = '';
     if(bool)
     {
-        htmlString += `<p class="hidden-text">${str}. is a palindrome.</p>`
+        htmlString += `<p class="hidden-text">(${str}). is a palindrome.</p>`
     }
     else
     {
-        htmlString += `<p class="hidden-text">${str}. is not a palindrome.</p>`
+        htmlString += `<p class="hidden-text">(${str}). is not a palindrome.</p>`
     }
     return htmlString;
 }
