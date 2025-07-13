@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galaxy Tiles</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <img id="header-img" src="images/logo1-removebg-preview.png" alt="Galaxy Tiles Logo" />
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#gallery">Gallery</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Galaxy Tiles</h1>
+    <p>Premium Concrete Tiles from Andhra Pradesh, India</p>
+    <a href="#contact" class="btn">Get a Quote</a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="feature">
+      <h2>Weather Resistant</h2>
+      <p>Our tiles are built to last in any condition — rain or shine.</p>
+    </div>
+    <div class="feature">
+      <h2>Modern Designs</h2>
+      <p>Choose from a wide range of textures and patterns.</p>
+    </div>
+    <div class="feature">
+      <h2>Eco-Friendly</h2>
+      <p>Made with sustainable materials for a greener future.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <img src="images/tiles1.jpg" alt="Tile 1" />
+    <img src="images/tiles2.jpeg" alt="Tile 2" />
+    <img src="images/tiles3.jpeg" alt="Tile 3" />
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <h2>See Them in Action</h2>
+    <iframe 
+        id="video" 
+        width="560" 
+        height="315"
+        src="https://www.youtube.com/embed/kjQiiABsn9c" 
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Galaxy Tiles</h2>
+    <p>Send us your email and our Andhra Pradesh-based team will get in touch.</p>
+    <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Your email (e.g. name@example.com)" 
+        required />
+      <input type="submit" id="submit" value="Get Quote" />
+    </form>
+    <p>Or email us directly: <a href="mailto:contact@galaxytiles.in">contact@galaxytiles.in</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Galaxy Tiles, Andhra Pradesh, India. All rights reserved.</p>
+  </footer>
+</body>
+</html>

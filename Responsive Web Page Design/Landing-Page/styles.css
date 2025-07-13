@@ -1,0 +1,168 @@
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f2f2f2;
+  color: #333;
+}
+
+/* Header */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #202020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 999;
+}
+#header-img {
+  height: 44px;
+  width: 240px;
+  object-fit: cover;
+}
+#nav-bar {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: #ff3c00;
+}
+
+/* Hero Section */
+.hero {
+  padding-top: 150px;
+  text-align: center;
+  background: url(images/background.jpg) center/cover no-repeat;
+  color: white;
+  padding-bottom: 5rem;
+}
+.hero h1 {
+  font-size: 3rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+.btn {
+  background: #ff3c00;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #e12d00;
+}
+
+/* Features */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 1rem;
+  background: #fff;
+  flex-wrap: wrap;
+}
+.feature {
+  flex: 1;
+  min-width: 250px;
+  margin: 1rem;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+  background: #ececec;
+  flex-wrap: wrap;
+}
+.gallery img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Video */
+.video-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: white;
+}
+.video-section iframe {
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+/* Contact */
+.contact {
+  padding: 3rem 1rem;
+  background: #ddd;
+  text-align: center;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+#email {
+  padding: 0.75rem;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+}
+#submit {
+  padding: 0.75rem 1.5rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#submit:hover {
+  background: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #202020;
+  color: white;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  #nav-bar {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .features, .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero
+  {
+    padding-top: 200px;
+  }
+}
