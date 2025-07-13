@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Technical Documentation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav id="navbar">
+    <header>JS Documentation</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#What_You_Should_Know">What You Should Know</a>
+    <a class="nav-link" href="#JavaScript_Syntax">JavaScript Syntax</a>
+    <a class="nav-link" href="#Variables">Variables</a>
+    <a class="nav-link" href="#Data_Types">Data Types</a>
+    <a class="nav-link" href="#Operators">Operators</a>
+    <a class="nav-link" href="#Control_Flow">Control Flow</a>
+    <a class="nav-link" href="#Functions">Functions</a>
+    <a class="nav-link" href="#Arrays_and_Objects">Arrays and Objects</a>
+    <a class="nav-link" href="#DOM_Manipulation">DOM Manipulation</a>
+    <a class="nav-link" href="#ES6_Features">ES6 Features</a>
+    <a class="nav-link" href="#Conclusion">Conclusion</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>JavaScript is a versatile programming language that allows you to implement complex features on web pages. It's one of the three core technologies of the web alongside HTML and CSS.</p>
+      <p>It is used for everything from dynamic content updates to full-scale web applications and server-side development with Node.js.</p>
+    </section>
+
+    <section class="main-section" id="What_You_Should_Know">
+      <header>What You Should Know</header>
+      <p>Before learning JavaScript, you should understand:</p>
+      <ul>
+        <li>Basic HTML structure</li>
+        <li>How CSS styles elements</li>
+        <li>Using the browser’s console</li>
+        <li>How to inspect and manipulate DOM elements</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="JavaScript_Syntax">
+      <header>JavaScript Syntax</header>
+      <p>JavaScript syntax is the set of rules that define a correctly structured program.</p>
+      <code>let greeting = "Hello, world!";</code>
+      <code>if (greeting) { console.log(greeting); }</code>
+    </section>
+
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <p>Variables are used to store data values. Declared using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+      <code>
+        var oldVar = "still works";<br>
+        let modernVar = "preferred";<br>
+        const constantVar = "cannot change";
+      </code>
+    </section>
+
+    <section class="main-section" id="Data_Types">
+      <header>Data Types</header>
+      <p>JavaScript provides different data types to hold different kinds of values:</p>
+      <ul>
+        <li>String</li>
+        <li>Number</li>
+        <li>Boolean</li>
+        <li>Null</li>
+        <li>Undefined</li>
+        <li>Object</li>
+        <li>Symbol (ES6)</li>
+      </ul>
+      <code>
+        let str = "text";<br>
+        let num = 42;<br>
+        let isTrue = true;
+      </code>
+    </section>
+
+    <section class="main-section" id="Operators">
+      <header>Operators</header>
+      <p>Operators are used to perform operations on variables and values.</p>
+      <ul>
+        <li>Arithmetic: + - * / %</li>
+        <li>Assignment: = += -=</li>
+        <li>Comparison: == === != !== &lt; &gt;</li>
+        <li>Logical: &amp;&amp; || !</li>
+      </ul>
+      <code>
+        let x = 5;<br>
+        let y = 10;<br>
+        let result = x + y; // 15
+      </code>
+    </section>
+
+    <section class="main-section" id="Control_Flow">
+      <header>Control Flow</header>
+      <p>Use control flow to decide what code to execute under specific conditions.</p>
+      <code>
+        if (score &gt; 90) {<br>
+          console.log("Excellent!");<br>
+        } else {<br>
+          console.log("Keep improving!");<br>
+        }
+      </code>
+      <code>
+        for (let i = 0; i &lt; 5; i++) {<br>
+          console.log(i);<br>
+        }
+      </code>
+    </section>
+
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>Functions let you define reusable blocks of code.</p>
+      <code>
+        function greet(name) {<br>
+          return "Hello " + name;<br>
+        }
+      </code>
+      <code>console.log(greet("Peter"));</code>
+    </section>
+
+    <section class="main-section" id="Arrays_and_Objects">
+      <header>Arrays and Objects</header>
+      <p>Arrays store ordered collections. Objects store key-value pairs.</p>
+      <code>
+        let fruits = ["apple", "banana", "cherry"];<br>
+        let person = { name: "Peter", age: 25 };
+      </code>
+      <code>
+        console.log(fruits[1]); // banana<br>
+        console.log(person.name); // Peter
+      </code>
+    </section>
+
+    <section class="main-section" id="DOM_Manipulation">
+      <header>DOM Manipulation</header>
+      <p>JavaScript can access and manipulate the Document Object Model (DOM) to update web pages dynamically.</p>
+      <code>
+        let heading = document.getElementById("main-title");<br>
+        heading.textContent = "Updated Title!";
+      </code>
+    </section>
+
+    <section class="main-section" id="ES6_Features">
+      <header>ES6 Features</header>
+      <p>ES6 (ECMAScript 2015) introduced many helpful features:</p>
+      <ul>
+        <li>Arrow functions</li>
+        <li>Template literals</li>
+        <li>Destructuring</li>
+        <li>Classes</li>
+        <li>Promises</li>
+      </ul>
+      <code>
+        const add = (a, b) => a + b;<br>
+        let name = "Peter";<br>
+        console.log(`Welcome, ${name}`);
+      </code>
+    </section>
+
+    <section class="main-section" id="Conclusion">
+      <header>Conclusion</header>
+      <p>JavaScript is powerful and essential for modern web development. Whether you're building a simple interactive page or a complex application, mastering JavaScript opens up endless possibilities.</p>
+    </section>
+  </main>
+</body>
+</html>
