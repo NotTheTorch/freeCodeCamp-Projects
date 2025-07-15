@@ -1,59 +1,44 @@
-const numberInput = document.getElementById('number-input');
-const convertButton = document.getElementById('convert-btn');
-const answer = document.getElementById('answer-block');
-const errorBox = document.getElementById('error-box');
+const input = document.getElementById("number");
+const button = document.getElementById("convert-btn");
+const output = document.getElementById("output");
 
-convertButton.addEventListener('click',()=>{
-    checker(numberInput.value);
-})
-
-numberInput.addEventListener('keydown',(key)=>{
-    if(key.code === "Enter")
-        checker(numberInput.value);
-})
-
-function convertToRoman(num) {
-  const romanMap = [
-    { value: 1000, symbol: "M" },
-    { value: 900, symbol: "CM" },
-    { value: 500, symbol: "D" },
-    { value: 400, symbol: "CD" },
-    { value: 100, symbol: "C" },
-    { value: 90, symbol: "XC" },
-    { value: 50, symbol: "L" },
-    { value: 40, symbol: "XL" },
-    { value: 10, symbol: "X" },
-    { value: 9, symbol: "IX" },
-    { value: 5, symbol: "V" },
-    { value: 4, symbol: "IV" },
-    { value: 1, symbol: "I" }
+const convertToRoman = (num) => {
+  const lookup = [
+    { value: 1000, numeral: "M" },
+    { value: 900, numeral: "CM" },
+    { value: 500, numeral: "D" },
+    { value: 400, numeral: "CD" },
+    { value: 100, numeral: "C" },
+    { value: 90, numeral: "XC" },
+    { value: 50, numeral: "L" },
+    { value: 40, numeral: "XL" },
+    { value: 10, numeral: "X" },
+    { value: 9, numeral: "IX" },
+    { value: 5, numeral: "V" },
+    { value: 4, numeral: "IV" },
+    { value: 1, numeral: "I" },
   ];
 
-  let romanString = "";
-
-  for (const { value, symbol } of romanMap) {
-    while (num >= value) {
-      romanString += symbol;
-      num -= value;
+  let result = "";
+  for (let i = 0; i < lookup.length; i++) {
+    while (num >= lookup[i].value) {
+      result += lookup[i].numeral;
+      num -= lookup[i].value;
     }
   }
+  return result;
+};
 
-  return romanString;
-}
+button.addEventListener("click", () => {
+  const num = Number(input.value);
 
-function checker(value)
-{
-    if(!value)
-    {
-        errorBox.textContent = "Please Enter a value to convert!";
-    }
-    else if(value > 3999)
-    {
-        errorBox.textContent = "Number should be or below 3999";
-    }
-    else
-    {
-    
-        answer.textContent = convertToRoman(numberInput.value);
-    }
-}
+  if (input.value === "" || isNaN(num)) {
+    output.textContent = "Please enter a valid number";
+  } else if (num < 1) {
+    output.textContent = "Please enter a number greater than or equal to 1";
+  } else if (num >= 4000) {
+    output.textContent = "Please enter a number less than or equal to 3999";
+  } else {
+    output.textContent = convertToRoman(num);
+  }
+});
