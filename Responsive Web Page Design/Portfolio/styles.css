@@ -168,7 +168,7 @@ body {
   margin: 1rem;
   width: 300px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease;
@@ -188,9 +188,14 @@ body {
   font-weight: bold;
 }
 
+.project-tile a {
+  
+    color: white;
+}
+
 /* Project Section Divider */
 .project-divider {
-  width: 90px;
+  width: 180px;
   height: 3px;
   background-color: #00bfff;
   border: none;
@@ -203,7 +208,7 @@ body {
   display: inline-block;
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
-  background-color: #00bfff;
+  background-color: #ff7215;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -212,7 +217,7 @@ body {
 }
 
 .see-more-btn:hover {
-  background-color: #009cd3;
+  background-color: #f04f22;
   color: #fff;
 }
 
