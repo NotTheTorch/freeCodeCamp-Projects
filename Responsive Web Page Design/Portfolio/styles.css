@@ -188,6 +188,57 @@ body {
   font-weight: bold;
 }
 
+/* Project Section Divider */
+.project-divider {
+  width: 90px;
+  height: 3px;
+  background-color: #00bfff;
+  border: none;
+  margin: 0 auto 2rem;
+  border-radius: 3px;
+}
+
+/* See More Button */
+.see-more-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #00bfff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #009cd3;
+  color: #fff;
+}
+
+/* === Fix: Project Tiles Wrapper for Consistent Layout === */
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Fix: Center the See More Button */
+.see-more-btn {
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+/* Fix: Ensure nav items align center in mobile */
+@media (max-width: 600px) {
+  #nav-links {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 /* Media Query */
 @media (max-width: 600px) {
   #navbar ul {
